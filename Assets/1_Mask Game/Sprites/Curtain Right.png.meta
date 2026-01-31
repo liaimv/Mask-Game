@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9cd139ac0d91275458e081376dd0380e
+guid: 784fd6cf0428a294585f36c4f36b8ab8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1200488047642626990
-    second: Fan + Arm_0
+      213: 6375712346750642154
+    second: Curtain Right_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fan + Arm_0
+      name: Curtain Right_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 3648
-        height: 3002
+        y: 0
+        width: 853
+        height: 1374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eab47d4d48df8a010800000000000000
-      internalID: 1200488047642626990
+      spriteID: ae7e42279941b7850800000000000000
+      internalID: 6375712346750642154
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fan + Arm_0: 1200488047642626990
+      Curtain Right_0: 6375712346750642154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

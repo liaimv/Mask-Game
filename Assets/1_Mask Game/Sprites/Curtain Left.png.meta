@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0ef15b6cc970093419aa8e70295efdfb
+guid: d249156a82211664dacc08e60f585a6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3915974310446420527
-    second: Hand + Forearm_0
+      213: -3320118100616761149
+    second: Curtain Left_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hand + Forearm_0
+      name: Curtain Left_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 75
-        width: 647
-        height: 2010
+        x: 0
+        y: 0
+        width: 853
+        height: 1374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f22d6bb33e5585630800000000000000
-      internalID: 3915974310446420527
+      spriteID: 3c0b460ad229ce1d0800000000000000
+      internalID: -3320118100616761149
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hand + Forearm_0: 3915974310446420527
+      Curtain Left_0: -3320118100616761149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
