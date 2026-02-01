@@ -185,7 +185,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6414790912049906296, guid: b1b84669f9d3047599cc511050b12330, type: 3}
+  m_Sprite: {fileID: 2695598510117126771, guid: ffd51f51eea4e41018139ee52fe9bca3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadScene
   sceneName: Mask Scene 3
+  onEnd: 0
 --- !u!1 &777444530
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,8 +582,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7075472, g: 0.28034887, b: 0.2770114, a: 1}
-    m_PressedColor: {r: 0.7058824, g: 0.2784314, b: 0.2784314, a: 1}
+    m_HighlightedColor: {r: 0.65882355, g: 0.45490196, b: 0.6745098, a: 1}
+    m_PressedColor: {r: 0.40392157, g: 0.20392157, b: 0.41568628, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -635,7 +636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 935367798112455826, guid: f2490b35f415c4a24afd879a9813ea18, type: 3}
+  m_Sprite: {fileID: 5602988437313991573, guid: 486d3406e37a144f9b79b60fb6cbcaeb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
