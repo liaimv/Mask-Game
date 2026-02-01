@@ -149,11 +149,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 319fa412ad84ff448bc060b340cb7b01, type: 3}
+  m_Resource: {fileID: 8300000, guid: 92e91808bcdebf64d8a680eef68c8fb0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
-  m_Pitch: 1
-  Loop: 0
+  m_Pitch: 0.9
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -248,7 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   buttonClip: {fileID: 8300000, guid: f02c4d3f4c2d9f64185e19ab9ca9f396, type: 3}
-  audioSource: {fileID: 586688107}
+  buttonSource: {fileID: 586688107}
+  mainSource: {fileID: 586688104}
 --- !u!4 &586688106
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4521664330183020609, guid: 25082ba766888489fb34fdce48ba7c23, type: 3}
+  m_Sprite: {fileID: -4381693984270815106, guid: 602c801c09dc791498ffa57d869e4eec, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1178,6 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartGame
   sceneName: Mask Scene 1
+  onEnd: 0
 --- !u!4 &2126277896
 Transform:
   m_ObjectHideFlags: 0

@@ -81,7 +81,20 @@ public class MaskChanger : MonoBehaviour
             return;
         }
 
-        if (Random.value > 0.2f)
+        float randomValue;
+        if (isLevel1)
+        {
+            randomValue = 0f;
+        }
+        else if (isLevel2)
+        {
+            randomValue = 0.05f;
+        }
+        else {
+            randomValue = 0.1f;
+        }
+
+        if (Random.value > randomValue)
         {
             totalMaskChanges++;
 
@@ -108,7 +121,7 @@ public class MaskChanger : MonoBehaviour
 
     private IEnumerator ApplauseAudioEnable()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         applauseSource.Play();
         applauseAudioAnimator.SetTrigger("FadeOut");

@@ -7,7 +7,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
 
     public AudioClip buttonClip;
-    public AudioSource audioSource;
+    public AudioSource buttonSource;
+    public AudioSource mainSource;
 
     void Awake()
     {
@@ -17,7 +18,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        Instance = this;
+            Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -29,8 +30,21 @@ public class AudioManager : MonoBehaviour
 
             if (clickedObj != null && clickedObj.CompareTag("Button"))
             {
-                audioSource.PlayOneShot(buttonClip);
+                buttonSource.PlayOneShot(buttonClip);
             }
+        }
+
+        if (Data.onLevel1 || Data.onStart)
+        {
+            mainSource.pitch = 0.9f;
+        }
+        else if (Data.onLevel2)
+        {
+            mainSource.pitch = 1f;
+        }
+        else if (Data.onLevel3)
+        {
+            mainSource.pitch = 1.1f;
         }
     }
 }
