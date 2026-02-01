@@ -15,6 +15,8 @@ public class QuestionManager : MonoBehaviour
 
     private int correctAnswer;
 
+    public MaskChanger maskChanger;
+
     void Awake()
     {
         questionCanvas.SetActive(false);
@@ -109,7 +111,19 @@ public class QuestionManager : MonoBehaviour
 
         if (playerAnswer == correctAnswer)
         {
-            SceneManager.LoadScene("Success Scene");
+            if (maskChanger.isLevel1)
+            {
+                SceneManager.LoadScene("Next Scene 1");
+            }
+            else if (maskChanger.isLevel2)
+            {
+                SceneManager.LoadScene("Next Scene 2");
+            }
+            else if (maskChanger.isLevel3)
+            {
+                SceneManager.LoadScene("Success Scene");
+            }
+
             Debug.Log("Correct!");
         }
         else
