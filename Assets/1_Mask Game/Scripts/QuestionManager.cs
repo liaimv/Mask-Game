@@ -30,7 +30,34 @@ public class QuestionManager : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
 
-        int questionType = Random.Range(0, 6);
+        int questionType = -1;
+        
+        while (questionType == -1) //Make sure when a certain color didn't show up, that question doesn't show
+        {
+            int temp = Random.Range(0, 6);
+
+            switch (temp)
+            {
+                case 0:
+                    questionType = 0;
+                    break;
+                case 1:
+                    if (data.redCount > 0) questionType = 1;
+                    break;
+                case 2:
+                    if (data.yellowCount > 0) questionType = 2;
+                    break;
+                case 3:
+                    if (data.greenCount > 0) questionType = 3;
+                    break;
+                case 4:
+                    if (data.blueCount > 0) questionType = 4;
+                    break;
+                case 5:
+                    if (data.whiteCount > 0) questionType = 5;
+                    break;
+            }
+        }
 
         switch (questionType)
         {

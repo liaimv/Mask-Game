@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class MaskChanger : MonoBehaviour
@@ -16,6 +17,11 @@ public class MaskChanger : MonoBehaviour
     public Animator camAnimator;
     public Animator leftCurtainAnimator;
     public Animator rightCurtainAnimator;
+
+    public Animator applauseAudioAnimator;
+    public AudioSource applauseSource;
+    public AudioSource maskSource;
+    public AudioSource armSource;
 
     public float minSpeed = 1f;
     public float maxSpeed = 10f;
@@ -36,6 +42,8 @@ public class MaskChanger : MonoBehaviour
         SetMask(Random.Range(0, masks.Length));
 
         maskChangeLimit = Random.Range(minFanMoves, maxFanMoves);
+
+        redCount = yellowCount = greenCount = blueCount = whiteCount = 0;
     }
 
     public void ChangeMask()
@@ -45,6 +53,8 @@ public class MaskChanger : MonoBehaviour
         if (totalArmMovement >= maskChangeLimit)
         {
             armAnimator.enabled = false;
+
+            StartCoroutine(ApplauseAudioEnable());
 
             camAnimator.SetTrigger("End");
             leftCurtainAnimator.SetTrigger("End");
@@ -58,6 +68,8 @@ public class MaskChanger : MonoBehaviour
         {
             totalMaskChanges++;
 
+            maskSource.PlayOneShot(maskSource.clip);
+
             int newIndex;
             do
             {
@@ -68,9 +80,21 @@ public class MaskChanger : MonoBehaviour
 
             SetMask(newIndex);
         }
+        else
+        {
+            armSource.PlayOneShot(armSource.clip);
+        }
 
-        float newSpeed = Random.Range(minSpeed, maxSpeed);
+            float newSpeed = Random.Range(minSpeed, maxSpeed);
         armAnimator.speed = newSpeed;
+    }
+
+    private IEnumerator ApplauseAudioEnable()
+    {
+        yield return new WaitForSeconds(1f);
+
+        applauseSource.Play();
+        applauseAudioAnimator.SetTrigger("FadeOut");
     }
 
     private void SetMask(int index)
