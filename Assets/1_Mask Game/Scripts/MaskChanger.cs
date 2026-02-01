@@ -42,6 +42,8 @@ public class MaskChanger : MonoBehaviour
 
     void Awake()
     {
+        redCount = yellowCount = greenCount = blueCount = whiteCount = 0;
+
         if (isLevel1)
         {
             masks = new Sprite[] { redMask, yellowMask, blueMask };
@@ -59,8 +61,6 @@ public class MaskChanger : MonoBehaviour
         }
 
         maskChangeLimit = Random.Range(minFanMoves, maxFanMoves);
-
-        redCount = yellowCount = greenCount = blueCount = whiteCount = 0;
     }
 
     public void ChangeMask()
