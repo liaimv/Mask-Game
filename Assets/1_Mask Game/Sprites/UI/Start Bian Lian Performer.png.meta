@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bf2029b5def00c54aaf5cb57874a7cdb
+guid: 0f6c1e72f04efb643a0462db53898fd7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7741214245327234435
-    second: Start Background 1_0
+      213: -7141982894123345746
+    second: Start Bian Lian Performer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Start Background 1_0
+      name: Start Bian Lian Performer_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2443
-        height: 1374
+        width: 1404
+        height: 1299
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7a931998aea19490800000000000000
-      internalID: -7741214245327234435
+      spriteID: ea89cdbc56492ec90800000000000000
+      internalID: -7141982894123345746
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Start Background 1_0: -7741214245327234435
+      Start Bian Lian Performer_0: -7141982894123345746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
