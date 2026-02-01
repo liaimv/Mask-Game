@@ -41,7 +41,7 @@ public class QuestionManager : MonoBehaviour
             switch (temp)
             {
                 case 0:
-                    if (Data.onLevel1 || Data.onStart) questionType = 0;
+                    questionType = 0;
                     break;
                 case 1:
                     if (data.redCount > 0) questionType = 1;
