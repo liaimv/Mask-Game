@@ -30,6 +30,10 @@ public class MaskChanger : MonoBehaviour
     public int maxFanMoves;
     private int maskChangeLimit;
 
+    public bool isLevel1 = false;
+    public bool isLevel2 = false;
+    public bool isLevel3 = false;
+
     public int totalArmMovement;
     public int totalMaskChanges = 0;
     public int redCount, yellowCount, greenCount, blueCount, whiteCount;
@@ -38,8 +42,21 @@ public class MaskChanger : MonoBehaviour
 
     void Awake()
     {
-        masks = new Sprite[] { redMask, yellowMask, greenMask, blueMask, whiteMask };
-        SetMask(Random.Range(0, masks.Length));
+        if (isLevel1)
+        {
+            masks = new Sprite[] { redMask, yellowMask, blueMask };
+            SetMask(Random.Range(0, masks.Length));
+        }
+        else if (isLevel2)
+        {
+            masks = new Sprite[] { redMask, yellowMask, greenMask, blueMask };
+            SetMask(Random.Range(0, masks.Length));
+        }
+        else if (isLevel3)
+        {
+            masks = new Sprite[] { redMask, yellowMask, greenMask, blueMask, whiteMask };
+            SetMask(Random.Range(0, masks.Length));
+        }
 
         maskChangeLimit = Random.Range(minFanMoves, maxFanMoves);
 
@@ -91,7 +108,7 @@ public class MaskChanger : MonoBehaviour
 
     private IEnumerator ApplauseAudioEnable()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         applauseSource.Play();
         applauseAudioAnimator.SetTrigger("FadeOut");
