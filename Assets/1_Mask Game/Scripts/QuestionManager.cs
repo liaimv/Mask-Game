@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class QuestionManager : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class QuestionManager : MonoBehaviour
     public TMP_InputField answerInput;
 
     public GameObject questionCanvas;
+    public GameObject invalidText;
 
     private int correctAnswer;
 
     void Awake()
     {
         questionCanvas.SetActive(false);
+        invalidText.SetActive(false);
     }
 
     public void ShowQuestion(MaskChanger data)
@@ -71,20 +74,30 @@ public class QuestionManager : MonoBehaviour
 
         if (!int.TryParse(answerInput.text, out playerAnswer))
         {
-            //SceneManager.LoadScene("GameOver");
             Debug.Log("Not a valid answer.");
+
+            StartCoroutine(InvalidTextDisplay());
             return;
         }
 
         if (playerAnswer == correctAnswer)
         {
-            //SceneManager.LoadScene("Success");
+            SceneManager.LoadScene("Success Scene");
             Debug.Log("Correct!");
         }
         else
         {
-            //SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Game Over Scene");
             Debug.Log("False!");
         }
+    }
+
+    private IEnumerator InvalidTextDisplay()
+    {
+        invalidText.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
+        invalidText.SetActive(false);
     }
 }
